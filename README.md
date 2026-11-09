@@ -51,7 +51,7 @@ Feel free to connect with me on LinkedIn: [RACHEL_HU-LINKEDIN-URL](https://www.l
 
 ## Install
 
-Download `canada-career-coach-v0.1.0.zip` from the [latest release](../../releases/latest). The zip contains only the skill folder, which Claude.ai expects.
+Download `canada-career-coach-v0.1.0.zip` from the [latest release](https://github.com/Rachel-lcy/Canada-Career-Coach/releases/latest). The zip contains only the skill folder, which Claude.ai expects.
 
 | Where       | How                                                                                                                   |
 | ----------- | --------------------------------------------------------------------------------------------------------------------- |

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Canada Career Coach</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="An open AI skill for job applications in Canada. It sorts requirements by level, maps keyword gaps, picks your resume version and proofreads. It audits; you write.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Canada Career Coach</a>
+    <div class="navlinks">
+      <a href="#assess">How it works</a>
+      <a href="#canada">Built for Canada</a>
+      <a href="#install">Install</a>
+      <a href="https://github.com/Rachel-lcy/Canada-Career-Coach">GitHub</a>
+    </div>
+    <a class="btn btn-blue btn-sm" href="https://github.com/Rachel-lcy/Canada-Career-Coach/releases/latest">Download skill</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Open-source AI skill · v0.1.0</p>
+        <h1>Check it. <span class="c1">Tailor it.</span> <span class="c2">Write it</span> yourself.</h1>
+      </div>
+      <div>
+        <p class="hero-copy">A job-search coach for roles in Canada. It reads a posting against your own profile, sorts every requirement by level, maps keyword gaps and tells you which resume to send. It is built not to invent experience.</p>
+        <div class="cta">
+          <a class="btn btn-blue" href="https://github.com/Rachel-lcy/Canada-Career-Coach/releases/latest">Download the skill</a>
+          <a class="btn btn-plain" href="#assess">See how it works</a>
+        </div>
+        <p class="hero-meta">Works with Claude and Gemini CLI · MIT Licence · Free</p>
+      </div>
+    </div>
+
+    <div class="tabs" role="list">
+      <a class="tab" role="listitem" href="#personalize" style="--c:var(--purple)"><span class="num">01</span>Personalize it</a>
+      <a class="tab" role="listitem" href="#assess" style="--c:var(--blue)"><span class="num">02</span>Assess a posting</a>
+      <a class="tab" role="listitem" href="#tailor" style="--c:var(--yellow)"><span class="num">03</span>Tailor your resume</a>
+      <a class="tab" role="listitem" href="#write" style="--c:var(--green)"><span class="num">04</span>Write it yourself</a>
+      <a class="tab" role="listitem" href="#install" style="--c:var(--pink)"><span class="num">★</span>Install</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap stages">
+
+  <!-- 01 -->
+  <section class="stage" id="personalize" style="--c:var(--purple)">
+    <div class="stage-head">
+      <span class="num">01</span>
+      <div><h2>Personalize it</h2><span class="sub">Your facts, kept on your side</span></div>
+    </div>
+    <div class="two">
+      <div>
+        <p class="label">Your profile is the source of truth</p>
+        <p class="muted">Upload your resume and the AI fills <code>my-profile.md</code> with you, asking about anything missing. The coach treats every line as fact, so you review each one.</p>
+        <div class="chips">
+          <span class="chip">City and province</span><span class="chip">Target roles</span><span class="chip">Skills</span>
+          <span class="chip">Canadian education</span><span class="chip">International education</span>
+          <span class="chip">Paid / volunteer / project</span><span class="chip">Driver's licence</span><span class="chip">Availability</span>
+          <span class="chip">Work authorization (optional)</span><span class="chip">Pay floor (optional)</span>
+        </div>
+      </div>
+      <div>
+        <p class="label">Two to four resume versions</p>
+        <p class="muted">Each version aims at one role family and says what it does not claim. The coach picks the best base for every posting.</p>
+        <div class="chips">
+          <span class="chip">Web Developer</span><span class="chip">IT Support</span><span class="chip">Business Analysis</span><span class="chip">Project Coordination</span>
+        </div>
+        <p class="muted" style="font-size:.88rem">Never asked: SIN, permit number, passport number or criminal history.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section class="stage" id="assess" style="--c:var(--blue)">
+    <div class="stage-head">
+      <span class="num">02</span>
+      <div><h2>Assess a posting</h2><span class="sub">Requirements first, verdict second</span></div>
+    </div>
+
+    <div>
+      <p class="label" style="margin-bottom:12px">Every assessment returns five sections</p>
+      <div class="letters">
+        <div class="letter" style="--lc:var(--pink)"><b>A</b><span>Requirements</span><small>Each one quoted, given a level and a status</small></div>
+        <div class="letter" style="--lc:var(--orange)"><b>B</b><span>Role fit</span><small>Duties, sector and seniority, not just the title</small></div>
+        <div class="letter" style="--lc:var(--green)"><b>C</b><span>Keywords</span><small>Up to 15 terms: supported, partly, or no evidence</small></div>
+        <div class="letter" style="--lc:var(--yellow)"><b>D</b><span>Resume</span><small>Which version to send and why</small></div>
+        <div class="letter" style="--lc:var(--purple)"><b>E</b><span>Salary</span><small>Hourly, bi-weekly or annual, compared on one basis</small></div>
+      </div>
+    </div>
+
+    <div>
+      <p class="label" style="margin-bottom:12px">Three levels of requirement</p>
+      <div class="levels">
+        <div class="level" style="--lb:#FFE4EC"><h3>Hard blocker</h3><p>Mandatory and can't be met before the start date.</p><p class="muted" style="font-size:.84rem">"Canadian citizens only" · a regulated licence you don't hold</p></div>
+        <div class="level" style="--lb:#FFF3C4"><h3>Pre-start condition</h3><p>Mandatory, but usually obtained after an offer.</p><p class="muted" style="font-size:.84rem">Police information check · Reliability Status</p></div>
+        <div class="level" style="--lb:#DDF8E7"><h3>Flexible</h3><p>Preferred, an asset, or offset by an equivalency.</p><p class="muted" style="font-size:.84rem">"French an asset" · "degree or equivalent experience"</p></div>
+      </div>
+    </div>
+
+    <div class="lab">
+      <h3>Try it: what level is this requirement?</h3>
+      <p class="muted" style="font-size:.9rem">These phrases come from real Calgary postings. Tap one to see how the coach reads it.</p>
+      <div class="phrases" id="phrases">
+        <button type="button" class="phrase" data-tag="Hard blocker" data-cls="v-hard" data-note="Driving is part of the job. If you don't hold a Class 5 licence now, this is a blocker, not a to-do item." aria-pressed="true">"A valid Class 5 driver's licence is required"</button>
+        <button type="button" class="phrase" data-tag="Pre-start condition" data-cls="v-pre" data-note="You can obtain this from the local police service, usually after an offer. The coach lists it as a to-do and never asks about criminal history." aria-pressed="false">"Able to provide a recent Police Information Check"</button>
+        <button type="button" class="phrase" data-tag="Flexible" data-cls="v-flex" data-note="The posting offsets education with experience. The coach applies the equivalency before calling anything a gap." aria-pressed="false">"1 year of education for 1 year of experience"</button>
+        <button type="button" class="phrase" data-tag="Logistics" data-cls="v-log" data-note="Not a skill. The coach compares it with the vehicle and availability in your profile." aria-pressed="false">"Have a reliable vehicle"</button>
+        <button type="button" class="phrase" data-tag="Hard blocker" data-cls="v-hard" data-note="Federal second-language level required at appointment. If your profile doesn't meet it, the coach flags it first." aria-pressed="false">"Bilingual imperative, BBB/BBB"</button>
+        <button type="button" class="phrase" data-tag="Not stated" data-cls="v-log" data-note="Silence is not a yes. The coach says it is not stated and suggests checking the application page." aria-pressed="false">(Posting says nothing about work authorization)</button>
+      </div>
+      <div class="verdict" id="verdict" aria-live="polite">
+        <span class="vtag v-hard" id="vtag">Hard blocker</span>
+        <p id="vnote">Driving is part of the job. If you don't hold a Class 5 licence now, this is a blocker, not a to-do item.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section class="stage" id="tailor" style="--c:var(--yellow)">
+    <div class="stage-head">
+      <span class="num">03</span>
+      <div><h2>Tailor your resume</h2><span class="sub" style="color:#B58900">Before and after, never a rewrite</span></div>
+    </div>
+    <div class="two">
+      <div>
+        <p class="label">Keep the scope honest</p>
+        <p class="muted">The coach mirrors the posting's words only where you have the experience, and keeps a home lab a home lab.</p>
+      </div>
+      <div>
+        <p class="label">Canadian resume checks</p>
+        <div class="chips">
+          <span class="chip">1–2 pages, letter size</span><span class="chip">No photo</span><span class="chip">No date of birth</span>
+          <span class="chip">No marital status</span><span class="chip">No SIN</span><span class="chip">Canadian spelling</span><span class="chip">References on request</span>
+        </div>
+      </div>
+    </div>
+    <div class="ba">
+      <div class="before"><span class="vtag v-hard">Before</span><q>Managed the company's Active Directory and user accounts.</q><p class="muted" style="font-size:.86rem">Reads as production work. The profile says this was a home lab.</p></div>
+      <div class="after"><span class="vtag v-flex">After</span><q>Configured Active Directory users, groups and policies in a Windows Server home lab.</q><p class="muted" style="font-size:.86rem">Same skill, true scope, and the keyword is still there.</p></div>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="stage" id="write" style="--c:var(--green)">
+    <div class="stage-head">
+      <span class="num">04</span>
+      <div><h2>Write it yourself</h2><span class="sub" style="color:#169C52">AI audits, you author</span></div>
+    </div>
+    <div class="two">
+      <div>
+        <p class="label">Cover letter: three questions first</p>
+        <p class="muted">Which organization and role? What genuinely interests you? Which experience do you want to lead with? Then you get an outline with prompts. Full prose only if you ask, labelled as a draft.</p>
+        <ol class="outline">
+          <li>Opening with a point of view</li><li>How you work</li><li>Evidence with results</li><li>Why this organization</li><li>Short, confident close</li>
+        </ol>
+      </div>
+      <div>
+        <p class="label">Proofreading</p>
+        <p class="muted">Paste any resume or letter. Edits come back as before-and-after pairs.</p>
+        <div class="chips">
+          <span class="chip">Canadian spelling</span><span class="chip">Tense</span><span class="chip">Passive voice</span>
+          <span class="chip">"Responsible for"</span><span class="chip">Vague numbers</span><span class="chip">Date formats</span>
+          <span class="chip">Titles match across documents</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- install -->
+  <section class="stage" id="install" style="--c:var(--pink)">
+    <div class="stage-head">
+      <span class="num">★</span>
+      <div><h2>Install</h2><span class="sub">Download once, use where you work</span></div>
+    </div>
+    <p class="muted">Get <code>canada-career-coach-v0.1.0.zip</code> from the latest release, then personalize it with your resume. Menu names change, so check each product's help pages.</p>
+    <div class="installs">
+      <div><strong>Claude.ai</strong><span>Turn on code execution, then upload the zip under Settings → Skills</span></div>
+      <div><strong>Claude Code</strong><span>Unzip into <code>~/.claude/skills/</code> or a project's <code>.claude/skills/</code></span></div>
+      <div><strong>Gemini CLI</strong><span>Unzip into <code>~/.gemini/skills/</code> or <code>.gemini/skills/</code></span></div>
+      <div><strong>Gemini app</strong><span>Create a Gem and paste the contents of <code>SKILL.md</code> into its instructions</span></div>
+    </div>
+    <div class="cta" style="margin-top:0">
+      <a class="btn btn-blue" href="https://github.com/Rachel-lcy/Canada-Career-Coach/releases/latest">Download v0.1.0</a>
+      <a class="btn btn-plain" href="https://github.com/Rachel-lcy/Canada-Career-Coach#readme">Read the README</a>
+    </div>
+  </section>
+</main>
+
+<section class="quote">
+  <div class="wrap">
+    <blockquote>"Use AI to check your application. Keep every claim your own."</blockquote>
+    <p class="eyebrow">The principle behind the project</p>
+  </div>
+</section>
+
+<section class="dark" id="canada">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--yellow)">Built for Canada</p>
+    <h2 style="margin-top:12px">Adapted, <span>not copied.</span></h2>
+    <p class="intro">This project adapts <a href="https://github.com/NotXinrui/UK-Career-Coach">UK Career Coach</a> by NotXinrui. The principles stayed the same. The market rules, the vocabulary and the examples changed.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th scope="col">UK version</th><th scope="col">Canada version</th></tr></thead>
+        <tbody>
+          <tr><td class="uk">CV, two pages, A4</td><td><strong style="color:var(--yellow)">Resume</strong>, one to two pages, letter size</td></tr>
+          <tr><td class="uk">Right to work, visa sponsorship</td><td><strong style="color:var(--yellow)">Work authorization</strong>: permits and LMIA, as you state them</td></tr>
+          <tr><td class="uk">SC / DV clearance</td><td><strong style="color:var(--yellow)">Security screening</strong>: Reliability, Enhanced Reliability, Secret, Top Secret</td></tr>
+          <tr><td class="uk">Blockers: yes or no</td><td><strong style="color:var(--yellow)">Three levels</strong>: hard blockers, pre-start conditions, flexible requirements</td></tr>
+          <tr><td class="uk">No language check</td><td><strong style="color:var(--yellow)">Official languages</strong>: English, French and federal levels such as BBB</td></tr>
+          <tr><td class="uk">British spelling</td><td><strong style="color:var(--yellow)">Canadian spelling</strong>: colour, centre, organize</td></tr>
+          <tr><td class="uk">UK salary sources</td><td><strong style="color:var(--yellow)">Job Bank</strong>, provincial surveys (alis in Alberta) and public-sector pay grids</td></tr>
+          <tr><td class="uk">PMO and consulting keywords</td><td><strong style="color:var(--yellow)">Web development</strong>, IT support, project coordination and business analysis</td></tr>
+          <tr><td class="uk">One national market</td><td><strong style="color:var(--yellow)">Provincial notes</strong>, with Alberta and Calgary as the worked example</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="wrap notes">
+  <div class="note" style="--c:var(--orange)">
+    <h3>Limitations</h3>
+    <ul>
+      <li>Early version, tested by the maintainer only.</li>
+      <li>Only as good as the resume, profile and postings you give it.</li>
+      <li>Rules and wage data change. The coach cites sources and dates; check them.</li>
+      <li>Only Alberta has detailed provincial notes so far. Contributions are welcome.</li>
+    </ul>
+  </div>
+  <div class="note" style="--c:var(--blue)">
+    <h3>Privacy and responsibility</h3>
+    <ul>
+      <li>Never put your filled-in profile or resumes in a public repository, and never share your personalized copy.</li>
+      <li>What you paste or upload is processed by your AI provider. Remove your phone number and address first.</li>
+      <li>Not career, legal or immigration advice. Check permit rules with IRCC.</li>
+      <li>Independent project. Not affiliated with Anthropic, Google or the Government of Canada.</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p><strong>Canada Career Coach</strong> · Canada adaptation by Rachel Hu, Calgary</p>
+      <p>Based on <a href="https://github.com/NotXinrui/UK-Career-Coach">UK Career Coach</a> by NotXinrui · MIT Licence</p>
+    </div>
+    <div>
+      <p><a href="https://github.com/Rachel-lcy/Canada-Career-Coach">Source on GitHub</a> · <a href="https://www.linkedin.com/in/rachelhu3/">LinkedIn</a></p>
+      <p><a href="https://github.com/Rachel-lcy/Canada-Career-Coach/issues">Tell me what worked or didn't</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
