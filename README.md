@@ -8,7 +8,7 @@ Adapted from [UK Career Coach](https://github.com/NotXinrui/UK-Career-Coach) by 
 
 Feel free to connect with me on LinkedIn: [RACHEL_HU-LINKEDIN-URL](https://www.linkedin.com/in/rachelhu3/)
 
-**Version** v0.1.0 · **Language** English (Canadian) · **Works with** Claude, Gemini CLI · **Website** https://YOUR-USERNAME.github.io/Canada-Career-Coach/
+**Version** v0.1.0 · **Language** English (Canadian) · **Works with** Claude, Gemini CLI · **Website** https://rachel-lcy.github.io/Canada-Career-Coach/
 
 ## What it does
 
