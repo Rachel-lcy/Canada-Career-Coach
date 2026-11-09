@@ -1,0 +1,13 @@
+# Personal data: never publish
+profile.md
+my-profile.md
+my-resume-tracks.md
+*resume*.pdf
+*resume*.docx
+*cover-letter*.pdf
+*cover-letter*.docx
+private/
+
+# System files
+.DS_Store
+Thumbs.db
