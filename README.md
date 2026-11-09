@@ -93,11 +93,14 @@ Personalize the canada-career-coach skill for me using my resume.
 ## Repository layout
 
 ```
-.
+Canada-Career-Coach
 ├── README.md
 ├── LICENSE
 ├── .gitignore                         keeps personal files out of Git
-├── docs/index.html                    project website (GitHub Pages)
+├── docs
+   ├──index.html
+   ├──style.css
+   ├──script.js                        project website (GitHub Pages)
 └── canada-career-coach/               the skill itself
     ├── SKILL.md                       rules and workflows the coach follows
     └── references/
