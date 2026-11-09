@@ -306,3 +306,24 @@ h4.q{margin:0;font-family:var(--display);font-weight:800;font-size:1.05rem;text-
 .kw-groups>div{border:2px solid var(--ink);border-radius:12px;padding:12px;display:grid;gap:8px;align-content:start;min-width:0}
 .kw-label{justify-self:start;font-family:var(--display);font-weight:800;font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;padding:3px 10px;border:1.5px solid var(--ink);border-radius:999px}
 .sample-foot .small{max-width:28em}
+
+/* returning users, sample inputs, chat paths */
+.return-link{justify-self:start;font-weight:700;font-size:.95rem;color:var(--blue)}
+.inputs{border:2px dashed var(--ink);border-radius:12px;padding:12px 16px}
+.inputs summary{cursor:pointer;font-weight:700;font-size:.92rem}
+.inputs-body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:12px}
+@media (max-width:760px){.inputs-body{grid-template-columns:1fr}}
+.inputs-body ul{margin:6px 0 0;padding-left:18px;display:grid;gap:4px;font-size:.88rem;color:var(--muted)}
+.summary .q{margin-bottom:2px}
+.chat-paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:760px){.chat-paths{grid-template-columns:1fr}}
+.cpath{border:2px solid var(--ink);border-radius:12px;padding:12px 14px;display:grid;gap:6px;align-content:start;background:var(--paper)}
+.help{margin-top:8px}
+
+/* save profile, recruiter question, mini tool switch */
+.save{border:2px solid var(--ink);border-radius:12px;padding:12px 14px;display:grid;gap:6px;background:#FFF8DB}
+.ask{border:2px solid var(--ink);border-radius:10px;background:var(--paper);padding:12px 14px;display:grid;gap:8px;justify-items:start}
+.ask-q{font-weight:600;font-style:italic}
+.mini-switch{display:flex;flex-wrap:wrap;gap:6px}
+.mini-switch button{font:inherit;font-size:.78rem;font-weight:700;padding:4px 10px;border:1.5px solid var(--ink);border-radius:999px;background:var(--paper);color:var(--ink);cursor:pointer}
+.mini-switch button[aria-pressed="true"]{background:var(--ink);color:#fff}

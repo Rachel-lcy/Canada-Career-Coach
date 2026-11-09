@@ -56,12 +56,24 @@
         var panel = document.getElementById(t.getAttribute('aria-controls'));
         if (panel) panel.hidden = !on;
       });
-      // Tool choice: show only the steps and prompts that match the chosen tool.
+      // Tool choice: show only the steps and prompts that match the chosen tool,
+      // and remember it in this browser so returning visitors see their tool.
       if (tab.dataset.tool) {
         document.querySelectorAll('[data-show]').forEach(function (el) {
           el.hidden = el.dataset.show.split(' ').indexOf(tab.dataset.tool) === -1;
         });
+        document.querySelectorAll('.mini-switch button').forEach(function (b) {
+          b.setAttribute('aria-pressed', b.dataset.switchTool === tab.id ? 'true' : 'false');
+        });
+        try { localStorage.setItem('ccc-tool', tab.id); } catch (e) {}
       }
+    }
+    // Restore the tool this visitor chose last time, if any.
+    if (tabs[0] && tabs[0].dataset.tool) {
+      var saved = null;
+      try { saved = localStorage.getItem('ccc-tool'); } catch (e) {}
+      var savedTab = saved && document.getElementById(saved);
+      select(savedTab && tabs.indexOf(savedTab) > -1 ? savedTab : tabs[0]);
     }
     tabs.forEach(function (tab, i) {
       tab.addEventListener('click', function () { select(tab); });
@@ -89,5 +101,19 @@
   menu.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && !menu.hidden) { setOpen(false); btn.focus(); }
+  });
+})();
+
+// "Use the Gemini app setup" and similar buttons: switch the tool choice in step 1.
+(function () {
+  document.querySelectorAll('[data-switch-tool]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var tab = document.getElementById(btn.dataset.switchTool);
+      if (!tab) return;
+      tab.click();
+      if (btn.hasAttribute('data-stay')) return;
+      tab.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      tab.focus({ preventScroll: true });
+    });
   });
 })();

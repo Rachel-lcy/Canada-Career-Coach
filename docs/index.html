@@ -84,14 +84,41 @@
       <span class="pill pill-yellow">Check first</span>
     </div>
 
+    <details class="inputs">
+      <summary>See the sample candidate and job details</summary>
+      <div class="inputs-body">
+        <div><p class="label">Candidate (fictional)</p><ul>
+          <li>Based in Calgary</li>
+          <li>Web development diploma</li>
+          <li>Capstone: a booking website built with React that calls a public REST API</li>
+          <li>Portfolio with four projects, all in JavaScript and React, all on GitHub with Git history</li>
+          <li>Used TypeScript in one personal project</li>
+          <li>Has called REST APIs, but hasn't built one</li>
+          <li>No testing framework mentioned</li>
+          <li>No paid development experience</li>
+          <li>Two resume versions: Web Developer and IT Support</li>
+          <li>Pay floor: $55,000 a year</li>
+          <li>Office availability: not stated</li>
+        </ul></div>
+        <div><p class="label">Posting (fictional)</p><ul>
+          <li>Bachelor's in Computer Science or equivalent experience</li>
+          <li>2+ years of professional development experience</li>
+          <li>React, JavaScript, TypeScript, REST APIs, Jest, Git</li>
+          <li>Hybrid, 3 days a week in the Calgary office</li>
+          <li>$60,000–$70,000 a year</li>
+        </ul></div>
+      </div>
+    </details>
     <div class="summary">
-      <p class="summary-verdict">Check whether the two-year experience requirement allows equivalent experience.</p>
-      <p><b>First step:</b> read the full posting for "or equivalent" next to the 2 years. If it isn't there, ask the recruiter whether a capstone and personal projects count.</p>
-    </div>
-
-    <div class="qa">
       <h4 class="q">Should I apply?</h4>
-      <p>Your React and JavaScript projects match the core duties. The posting asks for 2 years of professional experience, and yours comes from a capstone and personal projects. If the employer accepts that, apply.</p>
+      <p class="summary-verdict">First, check whether the two-year experience requirement accepts project experience.</p>
+      <p>Your React and JavaScript projects match the core duties, but your experience comes from a capstone and personal projects, not paid work. If the employer counts that, this role is worth applying for.</p>
+      <div class="ask">
+        <p class="small"><b>Ask the recruiter:</b></p>
+        <p id="recruiter-q" class="ask-q">Would you consider a capstone and personal projects toward the two-year professional experience requirement?</p>
+        <button type="button" class="copy" data-copy="recruiter-q">Copy question</button>
+      </div>
+      <p><b>Before you apply, also confirm</b> you can work from the Calgary office three days a week.</p>
     </div>
 
     <div class="qa">
@@ -114,7 +141,7 @@
       <h4 class="q">Which keywords can I use?</h4>
       <div class="kw-groups">
         <div><p class="kw-label k-ok">Use with evidence</p><div class="chips"><span class="chip">React</span><span class="chip">JavaScript</span><span class="chip">Git</span></div></div>
-        <div><p class="kw-label k-part">Use with context</p><div class="chips"><span class="chip">TypeScript</span><span class="chip">REST APIs</span></div><p class="small muted">Name the project where you used them.</p></div>
+        <div><p class="kw-label k-part">Use with context</p><div class="chips"><span class="chip">TypeScript</span><span class="chip">REST APIs</span></div><p class="small muted">TypeScript: name the one project. REST APIs: say you've used them, not built them.</p></div>
         <div><p class="kw-label k-miss">Leave out unless you have evidence</p><div class="chips"><span class="chip">Jest</span></div><p class="small muted">A gap to report, not a word to add.</p></div>
       </div>
     </div>
@@ -146,14 +173,33 @@
       <span class="pill pill-green">Apply</span>
     </div>
 
+    <details class="inputs">
+      <summary>See the sample candidate and job details</summary>
+      <div class="inputs-body">
+        <div><p class="label">Candidate (fictional)</p><ul>
+          <li>Based in Calgary, holds a Class 5 driver's licence</li>
+          <li>Home lab: Windows Server, Active Directory users and groups</li>
+          <li>Volunteer tech support at a community centre: fixes Windows 10/11 laptops and Microsoft 365 sign-in problems</li>
+          <li>Customer service in retail</li>
+          <li>No paid service desk experience; hasn't used a ticketing system</li>
+          <li>Two resume versions: Web Developer and IT Support</li>
+          <li>Evening availability: not stated</li>
+        </ul></div>
+        <div><p class="label">Posting (fictional)</p><ul>
+          <li>Troubleshoot Windows 10/11 and Microsoft 365</li>
+          <li>Valid Class 5 driver's licence</li>
+          <li>On-site, with an evening on-call rotation</li>
+          <li>Police information check before starting</li>
+          <li>Ticket triage in ServiceNow</li>
+          <li>No salary listed</li>
+        </ul></div>
+      </div>
+    </details>
     <div class="summary">
-      <p class="summary-verdict">Apply if you can cover the evening rotation.</p>
-      <p><b>First step:</b> confirm you're available for evening on-call shifts. It's the one requirement your profile doesn't answer.</p>
-    </div>
-
-    <div class="qa">
       <h4 class="q">Should I apply?</h4>
+      <p class="summary-verdict">Apply if you can cover the evening rotation.</p>
       <p>Your Windows troubleshooting and user support match the core duties. You haven't worked a production service desk yet, so expect questions about it in the interview.</p>
+      <p><b>First step:</b> confirm you're available for evening on-call shifts. It's the one requirement your profile doesn't answer.</p>
     </div>
 
     <div class="qa">
@@ -206,6 +252,7 @@
     <p class="eyebrow">Get started</p>
     <h2>Assess your own posting</h2>
     <p class="muted">Four steps the first time. Have your resume and one job posting ready.</p>
+    <a class="return-link" href="#step4">Already set up? Assess another posting →</a>
   </div>
 
   <!-- step 1 -->
@@ -230,16 +277,18 @@
 
     <div id="install-claude" role="tabpanel" aria-labelledby="tool-claude" class="install">
       <ol class="setup">
-        <li><b>Check your account.</b> In Claude.ai, open Settings and look for Skills. If you can't see it, open "Can't find Skills?" below first.</li>
+        <li><b>Check your account.</b> In Claude.ai, open Settings and look for Skills.
+          <details class="help">
+            <summary>Can't find Skills?</summary>
+            <p class="small">Skills may not be available on every plan, and menu names change. Search "skills" in the <a href="https://support.claude.com">Claude help centre</a>, or switch to the Gemini app for basic results.</p>
+            <button type="button" class="btn btn-plain btn-inline" data-switch-tool="tool-gemini">Use the Gemini app setup</button>
+          </details>
+        </li>
         <li><b>Download</b> <code>canada-career-coach-v0.1.0.zip</code>. Don't unzip it.
           <a class="btn btn-blue btn-inline" href="https://github.com/Rachel-lcy/Canada-Career-Coach/releases/latest">Download the zip</a></li>
         <li>In Settings, turn on <b>code execution</b>, then upload the zip under <b>Skills</b>.</li>
       </ol>
       <p class="done"><b>Done when</b> Canada Career Coach appears in your Skills list and is turned on. Then go to step 3.</p>
-      <details class="help">
-        <summary>Can't find Skills?</summary>
-        <p class="small">Skills may not be available on every plan, and menu names change. Search "skills" in the <a href="https://support.claude.com">Claude help centre</a>. If your account doesn't have Skills, choose <b>Gemini app</b> in step 1 for basic results.</p>
-      </details>
     </div>
 
     <div id="install-gemini" role="tabpanel" aria-labelledby="tool-gemini" class="install" hidden>
@@ -292,6 +341,12 @@
           <button type="button" class="copy" data-copy="setup-prompt-gemini">Copy setup prompt</button>
         </div>
         <p class="done"><b>Done when</b> you've reviewed and approved your profile. Stay in this chat and go to step 4.</p>
+        <div class="save">
+          <p class="label">Save your profile for next time</p>
+          <p class="small" data-show="claude">If the AI gives you <code>my-profile.md</code> as a file, download it. If it only shows the text, copy it into a file named <code>my-profile.md</code>. You'll attach it when you start a new chat later.</p>
+          <p class="small" data-show="gemini" hidden>Copy the full profile the Gem shows you and save it in a note or a file named <code>my-profile.md</code>. You'll paste it when you start a new chat later.</p>
+          <p class="small" data-show="terminal" hidden>Nothing to do. Your profile is saved in the skill folder.</p>
+        </div>
       </div>
       <div>
         <p class="label">The AI may ask you about</p>
@@ -305,23 +360,36 @@
   </div>
 
   <!-- step 4 -->
-  <div class="stage" style="--c:var(--green)">
+  <div class="stage" id="step4" style="--c:var(--green)">
     <div class="stage-head">
       <span class="num">4</span>
-      <div><h2>Assess your first job posting</h2><span class="sub" style="color:#169C52">In the same chat</span></div>
+      <div><h2>Assess a job posting</h2><span class="sub" style="color:#169C52">Every time you have a new posting</span></div>
+    </div>
+    <div class="chat-paths">
+      <div class="cpath"><p class="label">Continuing in the same chat?</p><p class="small">Your profile is already there. Go straight to the prompt below.</p></div>
+      <div class="cpath"><p class="label">Starting a new chat?</p>
+        <div class="mini-switch" aria-label="Your AI tool">
+          <button type="button" data-switch-tool="tool-claude" data-stay>Claude.ai</button>
+          <button type="button" data-switch-tool="tool-gemini" data-stay>Gemini app</button>
+          <button type="button" data-switch-tool="tool-terminal" data-stay>Terminal</button>
+        </div>
+        <p class="small" data-show="claude">Attach the <code>my-profile.md</code> you saved in step 3, then add the prompt below in the same message.</p>
+        <p class="small" data-show="gemini" hidden>Open your Gem, paste the profile you saved in step 3, then add the prompt below in the same message.</p>
+        <p class="small" data-show="terminal" hidden>Nothing to attach. Your profile is in the skill folder.</p>
+      </div>
     </div>
     <div class="two">
       <div>
         <ol class="setup">
-          <li><b>Copy the prompt below</b> and paste it into the same chat.</li>
+          <li><b>Copy the prompt below</b> and paste it into the chat.</li>
           <li><b>Replace</b> [Paste the job posting here] with the posting: duties, qualifications, location, schedule and pay if listed.</li>
           <li><b>Send it once.</b> The prompt and the posting go in one message.</li>
         </ol>
         <div class="prompt-box green">
-          <p id="assess-prompt">Using my profile, assess the job posting below. Tell me whether I should apply, what I need to verify, which keywords I can support, and which resume to use. Compare the pay if there's enough information.<br><br>[Paste the job posting here]</p>
+          <p id="assess-prompt">Using my profile, assess the job posting below. Tell me whether I should apply and give me one concrete next step. Show which requirements I meet, where I have gaps, and what I need to verify. Suggest keywords I can support with my experience. If I've shared multiple resumes, recommend one. If I've shared one, suggest the most useful change for this role. Compare pay if there's enough information.<br><br>[Paste the job posting here]</p>
           <button type="button" class="copy" data-copy="assess-prompt">Copy assessment prompt</button>
         </div>
-        <p class="done"><b>Done when</b> you get answers like the sample above. Ask follow-up questions in the same chat.</p>
+        <p class="done"><b>Done when</b> you get answers like the sample above. Ask follow-up questions in the same chat, or paste another posting.</p>
       </div>
       <div>
         <p class="label">What you'll get back</p>
@@ -331,18 +399,15 @@
           <li>Should you apply, and your first step</li>
           <li>Which requirements you meet, and what to verify</li>
           <li>Which keywords you can honestly use</li>
-          <li>Which resume to send</li>
+          <li>Which resume to send, or the most useful change to your one resume</li>
           <li>How the pay compares</li>
         </ul>
       </div>
     </div>
     <details class="again">
-      <summary>Next time: use your profile again</summary>
+      <summary>Advanced: skip attaching your profile in Claude.ai</summary>
       <div class="again-body">
-        <div class="plat"><strong>Claude.ai</strong><span>Download <code>my-profile.md</code> when the AI creates it. In a new chat, attach it before you paste a posting.</span></div>
-        <div class="plat"><strong>Gemini app</strong><span>Save the profile text. Paste it at the start of a new chat with your Gem.</span></div>
-        <div class="plat"><strong>Terminal</strong><span>Nothing to do. The profile is saved in the skill folder and used in every session.</span></div>
-        <p class="muted small">Advanced, Claude.ai: put <code>my-profile.md</code> in the skill's <code>references</code> folder and upload the zip again, so you don't need to attach it. Never share that copy.</p>
+        <p class="small muted">Put <code>my-profile.md</code> in the skill's <code>references</code> folder, zip the folder again and re-upload it under Skills. Every new chat then uses your profile. Never share that copy.</p>
       </div>
     </details>
   </div>
