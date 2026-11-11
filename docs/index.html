@@ -129,8 +129,8 @@
           <tbody>
             <tr><td data-label="The posting says">"Bachelor's in Computer Science or equivalent experience"</td><td data-label="Requirement">Flexible</td><td data-label="Your status"><span class="st st-ok">Supported</span> diploma plus projects</td></tr>
             <tr><td data-label="The posting says">"2+ years of professional development experience"</td><td data-label="Requirement">Mandatory</td><td data-label="Your status"><span class="st st-check">Needs confirmation</span> project experience, not paid</td></tr>
-            <tr><td data-label="The posting says">"Hybrid, 3 days a week in our Calgary office"</td><td data-label="Requirement">Logistics</td><td data-label="Your status"><span class="st st-check">Confirm office availability</span> You're based in Calgary. Confirm you can work from the office three days a week.</td></tr>
-            <tr><td data-label="The posting says">Work authorization</td><td data-label="Requirement">Not stated in the posting</td><td data-label="Your status"><span class="st st-check">Check the application page</span></td></tr>
+            <tr><td data-label="The posting says">"Hybrid, 3 days a week in our Calgary office"</td><td data-label="Requirement">Logistics</td><td data-label="Your status"><span class="st st-check">Needs confirmation</span> You're based in Calgary. Confirm you can work from the office three days a week.</td></tr>
+            <tr><td data-label="The posting says">Work authorization</td><td data-label="Requirement">Not stated</td><td data-label="Your status"><span class="st st-check">Check the application page</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -209,10 +209,10 @@
           <thead><tr><th scope="col">The posting says</th><th scope="col">Requirement</th><th scope="col">Your status</th></tr></thead>
           <tbody>
             <tr><td data-label="The posting says">"Troubleshoot Windows 10/11 and Microsoft 365"</td><td data-label="Requirement">Mandatory</td><td data-label="Your status"><span class="st st-ok">Supported</span> home lab and volunteer support</td></tr>
-            <tr><td data-label="The posting says">"Valid Class 5 driver's licence"</td><td data-label="Requirement">Mandatory</td><td data-label="Your status"><span class="st st-ok">Meets requirement</span></td></tr>
+            <tr><td data-label="The posting says">"Valid Class 5 driver's licence"</td><td data-label="Requirement">Mandatory</td><td data-label="Your status"><span class="st st-ok">Supported</span> in your profile</td></tr>
             <tr><td data-label="The posting says">"Available for an evening on-call rotation"</td><td data-label="Requirement">Logistics</td><td data-label="Your status"><span class="st st-check">Needs confirmation</span> not in your profile</td></tr>
-            <tr><td data-label="The posting says">"Police information check"</td><td data-label="Requirement">Pre-start</td><td data-label="Your status"><span class="st st-todo">To do after an offer</span></td></tr>
-            <tr><td data-label="The posting says">Work authorization</td><td data-label="Requirement">Not stated in the posting</td><td data-label="Your status"><span class="st st-check">Check the application page</span></td></tr>
+            <tr><td data-label="The posting says">"Police information check"</td><td data-label="Requirement">Pre-start condition</td><td data-label="Your status"><span class="st st-todo">To do</span> after an offer</td></tr>
+            <tr><td data-label="The posting says">Work authorization</td><td data-label="Requirement">Not stated</td><td data-label="Your status"><span class="st st-check">Check the application page</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -277,18 +277,19 @@
 
     <div id="install-claude" role="tabpanel" aria-labelledby="tool-claude" class="install">
       <ol class="setup">
-        <li><b>Check your account.</b> In Claude.ai, open Settings and look for Skills.
+        <li><b>Check your account.</b> In Claude.ai, go to <b>Settings → Customize → Skills</b>.
           <details class="help">
             <summary>Can't find Skills?</summary>
-            <p class="small">Skills may not be available on every plan, and menu names change. Search "skills" in the <a href="https://support.claude.com">Claude help centre</a>, or switch to the Gemini app for basic results.</p>
+            <p class="small">Skills may not be available on every plan, and menu names change. Search "skills" in the settings search box or the <a href="https://support.claude.com">Claude help centre</a>, or switch to the Gemini app for basic results.</p>
             <button type="button" class="btn btn-plain btn-inline" data-switch-tool="tool-gemini">Use the Gemini app setup</button>
           </details>
         </li>
-        <li><b>Download</b> <code>canada-career-coach-v0.1.0.zip</code>. Don't unzip it.
+        <li><b>Turn on file creation.</b> Go to <b>Settings → Capabilities</b> and turn on <b>Create and edit files</b>. Artifacts must be on too.</li>
+        <li><b>Download</b> <code>canada-career-coach-v0.1.1.zip</code>. Don't unzip it.
           <a class="btn btn-blue btn-inline" href="https://github.com/Rachel-lcy/Canada-Career-Coach/releases/latest">Download the zip</a></li>
-        <li>In Settings, turn on <b>code execution</b>, then upload the zip under <b>Skills</b>.</li>
+        <li><b>Upload it.</b> In <b>Settings → Customize → Skills</b>, press <b>+ Add</b> and choose the zip.</li>
       </ol>
-      <p class="done"><b>Done when</b> Canada Career Coach appears in your Skills list and is turned on. Then go to step 3.</p>
+      <p class="done"><b>Done when</b> <code>canada-career-coach</code> appears under <b>Yours</b> with a <b>Turn off</b> button. That button means it's on. Then go to step 3.</p>
     </div>
 
     <div id="install-gemini" role="tabpanel" aria-labelledby="tool-gemini" class="install" hidden>
@@ -304,7 +305,7 @@
 
     <div id="install-terminal" role="tabpanel" aria-labelledby="tool-terminal" class="install" hidden>
       <ol class="setup">
-        <li><b>Download</b> <code>canada-career-coach-v0.1.0.zip</code>.
+        <li><b>Download</b> <code>canada-career-coach-v0.1.1.zip</code>.
           <a class="btn btn-blue btn-inline" href="https://github.com/Rachel-lcy/Canada-Career-Coach/releases/latest">Download the zip</a></li>
         <li><b>Unzip</b> it into <code>~/.claude/skills/</code> for Claude Code, or <code>~/.gemini/skills/</code> for Gemini CLI.</li>
         <li><b>Start a new session</b> and ask: <i>What skills do you have?</i></li>
@@ -317,24 +318,28 @@
   <div class="stage" style="--c:var(--yellow)">
     <div class="stage-head">
       <span class="num">3</span>
-      <div><h2>Set up your profile</h2><span class="sub" style="color:#B58900">One chat for steps 3 and 4</span></div>
+      <div><h2>Set up your profile</h2><span class="sub" style="color:#B58900">One normal chat for steps 3 and 4</span></div>
     </div>
     <div class="privacy">
       <p class="label">Before you upload</p>
-      <p class="small">Remove your phone number and home address from your resume. What you upload goes to the AI provider you use; this website never sees it. The coach never asks for your SIN, permit number or criminal history.</p>
+      <p class="small">Use a normal chat. In an incognito chat the skill can't read its reference files. Remove your phone number and home address from your resume. What you upload goes to the AI provider you use; this website never sees it. The coach never asks for your SIN, permit number or criminal history.</p>
     </div>
     <div class="two">
       <div>
         <ol class="setup">
-          <li data-show="claude"><b>Open a new chat</b> in Claude.ai and attach your resume. One resume is enough.</li>
+          <li data-show="claude"><b>Open a new chat</b> in Claude.ai, not an incognito one, and attach your resume. One resume is enough.</li>
           <li data-show="gemini" hidden><b>Start a chat with your new Gem</b> and attach your resume. One resume is enough.</li>
           <li data-show="terminal" hidden><b>Start a new session</b> and give the path to your resume file. One resume is enough.</li>
           <li><b>Paste this prompt</b> in the same message and send it.</li>
           <li><b>Answer the AI's questions</b> and check every line before you say yes.</li>
         </ol>
-        <div class="prompt-box" data-show="claude terminal">
-          <p id="setup-prompt">Set up canada-career-coach for me from my resume. Fill references/profile-template.md and create references/my-profile.md. Ask me about anything missing. Don't invent anything, and show me every line before you save.</p>
+        <div class="prompt-box" data-show="claude">
+          <p id="setup-prompt">Set up canada-career-coach for me from my resume. Use references/profile-template.md and give me the finished profile as a file named my-profile.md. Ask me about anything missing. Don't invent anything, and show me the final version before you save it.</p>
           <button type="button" class="copy" data-copy="setup-prompt">Copy setup prompt</button>
+        </div>
+        <div class="prompt-box" data-show="terminal" hidden>
+          <p id="setup-prompt-terminal">Set up canada-career-coach for me from my resume. Use references/profile-template.md and save the finished profile as references/my-profile.md. Ask me about anything missing. Don't invent anything, and show me the final version before you save it.</p>
+          <button type="button" class="copy" data-copy="setup-prompt-terminal">Copy setup prompt</button>
         </div>
         <div class="prompt-box" data-show="gemini" hidden>
           <p id="setup-prompt-gemini">Build my career profile from my resume, following your instructions. Ask me about anything missing. Don't invent anything. When I approve it, show the full profile so I can save a copy.</p>
@@ -343,9 +348,9 @@
         <p class="done"><b>Done when</b> you've reviewed and approved your profile. Stay in this chat and go to step 4.</p>
         <div class="save">
           <p class="label">Save your profile for next time</p>
-          <p class="small" data-show="claude">If the AI gives you <code>my-profile.md</code> as a file, download it. If it only shows the text, copy it into a file named <code>my-profile.md</code>. You'll attach it when you start a new chat later.</p>
+          <p class="small" data-show="claude">The AI shares <code>my-profile.md</code> as a file card. Press its download button and keep the file private. You'll attach it when you start a new chat later.</p>
           <p class="small" data-show="gemini" hidden>Copy the full profile the Gem shows you and save it in a note or a file named <code>my-profile.md</code>. You'll paste it when you start a new chat later.</p>
-          <p class="small" data-show="terminal" hidden>Nothing to do. Your profile is saved in the skill folder.</p>
+          <p class="small" data-show="terminal" hidden>Nothing to do. Your profile is saved in your own copy of the skill folder. Never share that copy.</p>
         </div>
       </div>
       <div>
@@ -404,12 +409,6 @@
         </ul>
       </div>
     </div>
-    <details class="again">
-      <summary>Advanced: skip attaching your profile in Claude.ai</summary>
-      <div class="again-body">
-        <p class="small muted">Put <code>my-profile.md</code> in the skill's <code>references</code> folder, zip the folder again and re-upload it under Skills. Every new chat then uses your profile. Never share that copy.</p>
-      </div>
-    </details>
   </div>
 </section>
 
@@ -430,14 +429,14 @@
       <p class="muted">Every requirement gets two labels: what the posting asks for, and where you stand.</p>
       <div class="levels">
         <div class="level" style="--lb:#FFE4EC"><h3>Mandatory</h3><p>Must be met by the start date. If your profile clearly doesn't meet it, it's a blocker. If it's unclear, it needs confirmation.</p></div>
-        <div class="level" style="--lb:#FFF3C4"><h3>Pre-start</h3><p>Mandatory, but usually done after an offer, like a police information check.</p></div>
+        <div class="level" style="--lb:#FFF3C4"><h3>Pre-start condition</h3><p>Mandatory, but usually done after an offer, like a police information check.</p></div>
         <div class="level" style="--lb:#DDF8E7"><h3>Flexible</h3><p>Preferred, an asset, or offset by "or equivalent experience".</p></div>
       </div>
       <div class="lab">
         <h3>Try it: tap a phrase from a real Calgary posting</h3>
         <div class="phrases" id="phrases">
           <button type="button" class="phrase" aria-pressed="true" data-tag="Mandatory" data-cls="v-hard" data-note="Have a Class 5 licence? Your status: meets requirement. Don't have one? It's a blocker for this job.">"A valid Class 5 driver's licence is required"</button>
-          <button type="button" class="phrase" aria-pressed="false" data-tag="Pre-start" data-cls="v-pre" data-note="Obtained from your local police service, usually after an offer. It goes on your to-do list. The coach never asks about criminal history.">"Able to provide a recent Police Information Check"</button>
+          <button type="button" class="phrase" aria-pressed="false" data-tag="Pre-start condition" data-cls="v-pre" data-note="Obtained from your local police service, usually after an offer. It goes on your to-do list. The coach never asks about criminal history.">"Able to provide a recent Police Information Check"</button>
           <button type="button" class="phrase" aria-pressed="false" data-tag="Flexible" data-cls="v-flex" data-note="Education and experience can offset each other. The coach applies this before calling anything a gap.">"1 year of education for 1 year of experience"</button>
           <button type="button" class="phrase" aria-pressed="false" data-tag="Logistics" data-cls="v-log" data-note="Not a skill. The coach compares it with the availability and transport in your profile, or asks you.">"Have a reliable vehicle"</button>
           <button type="button" class="phrase" aria-pressed="false" data-tag="Mandatory" data-cls="v-hard" data-note="A federal second-language level. If your profile doesn't meet it, the coach flags it first.">"Bilingual imperative, BBB/BBB"</button>
