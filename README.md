@@ -2,13 +2,13 @@
 
 Use AI to check your application, then write it yourself.
 
-An open skill for job applications in Canada. It checks a job posting against your profile, sorts the requirements into hard blockers, pre-start conditions and flexible ones, maps keyword gaps, recommends which resume version to use, and proofreads in Canadian English.
+An open skill for job applications in Canada. It checks a job posting against your profile, gives each requirement a level and your status against it, maps keyword gaps, recommends which resume version to use, and proofreads in Canadian English.
 
 Adapted from [UK Career Coach](https://github.com/NotXinrui/UK-Career-Coach) by NotXinrui, under the MIT Licence.
 
-Feel free to connect with me on LinkedIn: [RACHEL_HU-LINKEDIN-URL](https://www.linkedin.com/in/rachelhu3/)
+Feel free to connect with me on LinkedIn: [Rachel Hu](https://www.linkedin.com/in/rachelhu3/)
 
-**Version** v0.1.0 · **Language** English (Canadian) · **Works with** Claude, Gemini CLI · **Website** https://rachel-lcy.github.io/Canada-Career-Coach/
+**Version** v0.1.1 · **Language** English (Canadian) · **Works with** Claude, Gemini CLI · **Website** https://rachel-lcy.github.io/Canada-Career-Coach/
 
 ## What it does
 
@@ -22,22 +22,22 @@ Feel free to connect with me on LinkedIn: [RACHEL_HU-LINKEDIN-URL](https://www.l
 
 ## What changed from the UK version
 
-| UK version                                       | Canada version                                                                                                                                       |
-| ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CV, two pages, A4                                | Resume, one to two pages, letter size                                                                                                                |
-| Right to work, visa sponsorship                  | Work authorization, work permits and LMIA, as you state them                                                                                         |
-| SC / DV clearance                                | Reliability, Enhanced Reliability, Secret, Top Secret                                                                                                |
-| Blockers: yes or no                              | Three levels: hard blockers, pre-start conditions (police information check, driver's licence), flexible requirements (assets, stated equivalencies) |
-| British spelling                                 | Canadian spelling (colour, centre, organize)                                                                                                         |
-| (none)                                           | Official-language requirements (English, French, federal levels such as BBB)                                                                         |
-| UK salary sources                                | Job Bank wage data, provincial surveys (alis in Alberta) and public-sector pay grids                                                                 |
-| (none)                                           | Canadian and international education kept separate; experience labelled as paid, volunteer, project or home lab                                      |
-| PMO, transformation and consulting keyword banks | Web development, IT support, project coordination and business analysis banks                                                                        |
-| (none)                                           | Provincial notes, with Alberta and Calgary as the worked example                                                                                     |
+| UK version                                       | Canada version                                                                                                                    |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| CV, two pages, A4                                | Resume, one to two pages, letter size                                                                                             |
+| Right to work, visa sponsorship                  | Work authorization, work permits and LMIA, as you state them                                                                      |
+| SC / DV clearance                                | Reliability, Enhanced Reliability, Secret, Top Secret                                                                             |
+| Blockers: yes or no                              | Each requirement gets a level (mandatory, pre-start condition, flexible, logistics, not stated) and your status, shown separately |
+| British spelling                                 | Canadian spelling (colour, centre, organize)                                                                                      |
+| (none)                                           | Official-language requirements (English, French, federal levels such as BBB)                                                      |
+| UK salary sources                                | Job Bank wage data, provincial surveys (alis in Alberta) and public-sector pay grids                                              |
+| (none)                                           | Canadian and international education kept separate; experience labelled as paid, volunteer, project or home lab                   |
+| PMO, transformation and consulting keyword banks | Web development, IT support, project coordination and business analysis banks                                                     |
+| (none)                                           | Provincial notes, with Alberta and Calgary as the worked example                                                                  |
 
 ## Principles
 
-1. **Requirements first.** Work authorization, security screening, language, licences and background checks are sorted by level before anything else.
+1. **Requirements first.** Work authorization, security screening, language, licences and background checks are sorted by level before anything else. When a posting doesn't mention work authorization, the coach says so and points you to the application page.
 2. **Built not to invent.** It is instructed never to make up achievements, certifications, tools, titles, numbers, dates or eligibility, and to report gaps instead. This is an instruction, not a guarantee, so check every line.
 3. **Keep the scope honest.** A home lab stays a home lab; a capstone project is not paid experience.
 4. **AI audits; you author.** Facts, claims and final wording stay with you.
@@ -46,61 +46,53 @@ Feel free to connect with me on LinkedIn: [RACHEL_HU-LINKEDIN-URL](https://www.l
 ## Quick start
 
 1. **Install** the skill (below).
-2. **Personalize it first** (below). This step makes it useful, and it needs your resume.
+2. **Set up your profile** (below). This step makes it useful, and it needs your resume.
 3. **Use it.** Paste a job posting and ask, for example: _"Assess this role against my profile and tell me which resume version to use."_
+
+Use a normal chat. In an incognito chat the skill can't read its reference files.
 
 ## Install
 
-Download `canada-career-coach-v0.1.0.zip` from the [latest release](https://github.com/Rachel-lcy/Canada-Career-Coach/releases/latest). The zip contains only the skill folder, which Claude.ai expects.
+Download `canada-career-coach-v0.1.1.zip` from the [latest release](https://github.com/Rachel-lcy/Canada-Career-Coach/releases/latest). Don't unzip it for Claude.ai. The zip contains only the skill folder.
 
-| Where       | How                                                                                                                   |
-| ----------- | --------------------------------------------------------------------------------------------------------------------- |
-| Claude.ai   | Turn on code execution, then upload the zip in Settings under Skills (menu names change; see Anthropic's help centre) |
-| Claude Code | Unzip into `~/.claude/skills/` (personal) or `.claude/skills/` (per project)                                          |
-| Gemini CLI  | Unzip into `~/.gemini/skills/` or `.gemini/skills/`                                                                   |
-| Gemini app  | No native skill support. Create a Gem and paste the contents of `SKILL.md` into its instructions                      |
+| Where       | How                                                                                                                                                                                                                                                                 |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Claude.ai   | 1. Settings → Capabilities: turn on **Create and edit files** (Artifacts must be on too). 2. Settings → Customize → Skills → **+ Add**: upload the zip. 3. Done when `canada-career-coach` appears under **Yours** with a **Turn off** button (that means it's on). |
+| Claude Code | Unzip into `~/.claude/skills/` (personal) or `.claude/skills/` (per project)                                                                                                                                                                                        |
+| Gemini CLI  | Unzip into `~/.gemini/skills/` or `.gemini/skills/`                                                                                                                                                                                                                 |
+| Gemini app  | No native skill support. Create a Gem and paste the contents of `SKILL.md` into its instructions. Reference files aren't included, so results are more basic                                                                                                        |
 
-Custom skills do not sync between products, so install them separately where you use them. Checked on 8 November 2026; these routes change, so confirm against the official documentation.
+Custom skills do not sync between products, so install them separately where you use them. Claude.ai steps checked on 10 November 2026; menu names change, so confirm against the official documentation.
 
-## Personalize it first
+## Set up your profile
 
-The skill ships with blank templates, so out of the box it is generic. After installing, make this your first step:
+The skill ships with a blank template, so out of the box it is generic. After installing:
 
-1. Open your tool's skill editor with this skill loaded. If your app has a skill-creator skill, use that. If it has no editor, edit the Markdown files yourself.
-2. Upload your current resume and any tailored versions you already have.
-3. Paste this prompt:
+1. Remove your phone number and home address from your resume.
+2. Open a new (not incognito) chat, attach your resume and send this prompt in the same message:
 
 ```text
-Personalize the canada-career-coach skill for me using my resume.
-
-1. Fill references/profile-template.md from my resume and save it as
-   references/my-profile.md, leaving the template untouched. Ask me about
-   anything missing, such as target roles, city and province, work arrangement,
-   pay floor and, only if I want to include it, work authorization. Do not
-   invent or infer facts. Do not ask for my SIN, permit number or anything
-   about criminal history.
-2. Propose two to four resume versions using
-   references/resume-tracks-template.md and save them as
-   references/my-resume-tracks.md: name, target roles, lead evidence,
-   vocabulary, and what each version does not claim.
-3. Show me every change as before and after, and wait for my approval before
-   saving anything.
+Set up canada-career-coach for me from my resume. Use references/profile-template.md
+and give me the finished profile as a file named my-profile.md. Ask me about
+anything missing. Don't invent anything, and show me the final version before you
+save it.
 ```
 
-4. Review the result line by line. The coach treats everything in your profile as fact, so correct anything wrong. If your app installs skills from a zip, re-zip and re-upload the personalized folder.
-   This step sends your resume to the AI provider you are using. Check its data settings, consider removing your phone number and home address first, and keep `my-profile.md` and `my-resume-tracks.md` out of any public repository. The `.gitignore` in this repository already excludes those names. Never share your personalized copy of the skill.
+3. Answer the questions and check every line. The coach treats everything in your profile as fact. Optional fields, such as work authorization and pay, can be skipped.
+4. Download `my-profile.md` and keep it private. In a new chat, attach it before you paste a posting.
+
+In a terminal tool you can instead save it as `references/my-profile.md` in your own installed copy, so every session uses it. Never share that copy.
+
+This step sends your resume to the AI provider you are using. Check its data settings first. The `.gitignore` in this repository already excludes `my-profile.md` and `my-resume-tracks.md`.
 
 ## Repository layout
 
 ```
-Canada-Career-Coach
+.
 ├── README.md
 ├── LICENSE
 ├── .gitignore                         keeps personal files out of Git
-├── docs
-   ├──index.html
-   ├──style.css
-   ├──script.js                        project website (GitHub Pages)
+├── docs/index.html                    project website (GitHub Pages)
 └── canada-career-coach/               the skill itself
     ├── SKILL.md                       rules and workflows the coach follows
     └── references/
@@ -111,11 +103,12 @@ Canada-Career-Coach
         └── canada-market-notes.md     Canadian conventions, requirement levels, official sources
 ```
 
-Your own `my-profile.md` and `my-resume-tracks.md` are created in `references/` when you personalize the skill. They are personal, so they are not part of this repository.
+Your own `my-profile.md` is personal, so it is not part of this repository.
 
 ## Limitations
 
-- **Early version.** Tested by the maintainer only; it has not been tested with other users yet.
+- **Early version.** Tested by the maintainer in Claude.ai (install, profile setup and assessments of real Alberta and Quebec postings). Not yet tested with other users, Gemini or terminal tools.
+- **Memory.** In tools that remember past chats, the coach may know things that aren't in your profile. It is instructed to say so, but keep your profile complete.
 - **Only as good as your inputs.** The coach works from the resume, profile and job postings you give it, and cannot check them.
 - **Rules and market data go stale.** The skill asks for official sources and dates; verify anything it cites.
 - **Province matters.** Only Alberta has detailed notes so far. Contributions for other provinces are welcome.

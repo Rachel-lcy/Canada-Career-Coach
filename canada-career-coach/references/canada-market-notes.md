@@ -2,7 +2,7 @@
 
 Background for the coach. **Rules change.** Treat everything here as a starting point: before stating a rule as current, check the official source and tell the user the date you checked.
 
-Last reviewed by the maintainer: November 2026.
+Last reviewed by the maintainer: November 2026 (v0.1.1).
 
 ## Resume conventions
 
@@ -15,22 +15,24 @@ Last reviewed by the maintainer: November 2026.
 
 ## Requirement phrases and their usual level
 
-| Phrase in posting                                                | Usual level                                  | Notes                                                                    |
-| ---------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------ |
-| "Canadian citizens only", "citizens or permanent residents only" | Hard blocker                                 | Common in some government, defence and security roles                    |
-| "Must be legally entitled to work in Canada", "no sponsorship"   | Hard blocker if the user lacks authorization | The employer will not support a work permit                              |
-| "Must hold Secret / Top Secret clearance"                        | Hard blocker if not held                     | Held now, not obtained later                                             |
-| "Must be able to obtain Reliability Status"                      | Pre-start condition                          | Usually done after an offer                                              |
-| "Bilingual imperative", "BBB/BBB", "CBC/CBC"                     | Hard blocker if not met                      | Federal second-language level                                            |
-| "French an asset"                                                | Flexible                                     |                                                                          |
-| "Valid Class 5 driver's licence" (Alberta) or equivalent         | Hard blocker if not held                     | Check the class named                                                    |
-| "Reliable vehicle", "own transportation"                         | Logistics                                    | Compare with the user's profile                                          |
-| "Police information check", "vulnerable sector check"            | Pre-start condition                          | Obtained from the local police service. Never ask about criminal history |
-| Regulated title (P.Eng., CPA, RN, journeyperson)                 | Hard blocker if not held                     | Provincial licence or designation                                        |
-| "Degree or equivalent experience", stated equivalency            | Flexible                                     | Apply the equivalency before marking a gap                               |
-| "Preferred", "an asset", "nice to have"                          | Flexible                                     |                                                                          |
+| Phrase in posting                                                | Level               | Notes                                                                    |
+| ---------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------ |
+| "Canadian citizens only", "citizens or permanent residents only" | Mandatory           | Common in some government, defence and security roles                    |
+| "Must be legally entitled to work in Canada", "no sponsorship"   | Mandatory           | The employer will not support a work permit                              |
+| "Must hold Secret / Top Secret clearance"                        | Mandatory           | Held now, not obtained later                                             |
+| "Must be able to obtain Reliability Status"                      | Pre-start condition | Usually done after an offer                                              |
+| "Bilingual imperative", "BBB/BBB", "CBC/CBC"                     | Mandatory           | Federal second-language level                                            |
+| "French an asset"                                                | Flexible            |                                                                          |
+| "Valid Class 5 driver's licence" (Alberta) or equivalent         | Mandatory           | Check the class named                                                    |
+| "Reliable vehicle", "own transportation"                         | Logistics           | Compare with the user's profile                                          |
+| "Police information check", "vulnerable sector check"            | Pre-start condition | Obtained from the local police service. Never ask about criminal history |
+| Regulated title (P.Eng., CPA, RN, journeyperson)                 | Mandatory           | Provincial licence or designation                                        |
+| "Degree or equivalent experience", stated equivalency            | Flexible            | Apply the equivalency before marking a gap                               |
+| "Preferred", "an asset", "nice to have"                          | Flexible            |                                                                          |
 
-If a posting does not mention work authorization, record it as **Not stated** and suggest checking the application page.
+A mandatory requirement the user clearly doesn't meet is a blocker (status: Confirmed conflict).
+
+If a posting does not mention work authorization, record Level **Not stated** and Status **Check the application page**, and add no judgment about the user's status.
 
 ## Pay formats
 
@@ -65,4 +67,5 @@ Check that each link still works before relying on it.
 - National Occupational Classification (NOC): https://noc.statcan.gc.ca
 - Alberta labour-market information: https://alis.alberta.ca
 - WorkBC: https://www.workbc.ca
-- This file is not legal or immigration advice.
+
+This file is not legal or immigration advice.

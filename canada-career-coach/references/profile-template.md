@@ -1,6 +1,6 @@
 # Profile Template
 
-Copy this file, rename the copy to `my-profile.md`, fill it in, and keep it **on your own computer**. Do not put it inside the skill folder and do not commit it to a public repository (the `.gitignore` already excludes `my-profile.md` and `profile.md`). Upload it into a conversation when you want the coach to use it.
+Fill this in with the coach's help (see "Set up your profile" on the project website), or by hand. Save the result as `my-profile.md` and keep it **private**: on your computer, never in a public repository, and never in a copy of the skill you share. In Claude.ai, attach it at the start of each new chat. In a terminal tool, you can keep it in this `references` folder of your own installed copy. The `.gitignore` already excludes `my-profile.md`.
 
 Only write what is true and verifiable; the coach treats every line here as fact. Fields marked _(optional)_ can be left blank. If you leave them blank, the coach will ask when a job posting makes them relevant, instead of guessing.
 
