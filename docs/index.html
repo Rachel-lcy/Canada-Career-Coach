@@ -263,7 +263,7 @@
     </div>
     <div class="tool-tabs" role="tablist" aria-label="Choose your AI tool">
       <button type="button" class="tool" role="tab" id="tool-claude" data-tool="claude" aria-controls="install-claude" aria-selected="true"><strong>Claude.ai</strong><span>Web app · full results. Needs Skills in your account settings.</span></button>
-      <button type="button" class="tool" role="tab" id="tool-gemini" data-tool="gemini" aria-controls="install-gemini" aria-selected="false" tabindex="-1"><strong>Gemini app</strong><span>Web app · basic results. Uses the coach's instructions without the extra reference files.</span></button>
+      <button type="button" class="tool" role="tab" id="tool-gemini" data-tool="gemini" aria-controls="install-gemini" aria-selected="false" tabindex="-1"><strong>Gemini app</strong><span>Web app · basic results. Upload the skill to Gemini. Check its answers carefully.</span></button>
       <button type="button" class="tool" role="tab" id="tool-terminal" data-tool="terminal" aria-controls="install-terminal" aria-selected="false" tabindex="-1"><strong>I use a terminal</strong><span>Claude Code or Gemini CLI · full results</span></button>
     </div>
   </div>
@@ -293,14 +293,15 @@
     </div>
 
     <div id="install-gemini" role="tabpanel" aria-labelledby="tool-gemini" class="install" hidden>
-      <p class="note-basic">The Gemini app doesn't support skills, so the Gem uses the coach's main instructions only. You'll get the assessment, with less detail on Canadian rules and keywords.</p>
+      <p class="note-basic">Basic results. In our tests, Gemini followed the coach's format but missed some requirements and was more likely to overrate fit. Check its answers carefully.</p>
       <ol class="setup">
-        <li><b>Open</b> <code>SKILL.md</code> on GitHub and copy all of it.
-          <a class="btn btn-blue btn-inline" href="https://github.com/Rachel-lcy/Canada-Career-Coach/blob/main/canada-career-coach/SKILL.md">Open SKILL.md</a></li>
-        <li>In the Gemini app, create a new <b>Gem</b>.</li>
-        <li>Paste the text into the Gem's <b>instructions</b> and save.</li>
+        <li><b>Download</b> <code>canada-career-coach-v0.1.1.zip</code>. Don't unzip it.
+          <a class="btn btn-blue btn-inline" href="https://github.com/Rachel-lcy/Canada-Career-Coach/releases/latest">Download the zip</a></li>
+        <li>Go to <b>gemini.google.com</b> on a computer, or the Gemini Mac app. Uploading doesn't work in the Gemini phone app yet.</li>
+        <li>Open <b>Customize → Skills</b>, then press <b>Create → Upload</b> and choose the zip.</li>
       </ol>
-      <p class="done"><b>Done when</b> your new Gem appears in your Gem list. Then go to step 3.</p>
+      <p class="done"><b>Done when</b> <code>canada-career-coach</code> appears under <b>Installed</b> on the Skills page. Then go to step 3.</p>
+      <p class="small">Skills need a personal Google account. Work and school accounts may not have them yet. Gems are being replaced by skills, so don't use a Gem.</p>
     </div>
 
     <div id="install-terminal" role="tabpanel" aria-labelledby="tool-terminal" class="install" hidden>
@@ -328,7 +329,8 @@
       <div>
         <ol class="setup">
           <li data-show="claude"><b>Open a new chat</b> in Claude.ai, not an incognito one, and attach your resume. One resume is enough.</li>
-          <li data-show="gemini" hidden><b>Start a chat with your new Gem</b> and attach your resume. One resume is enough.</li>
+          <li data-show="gemini" hidden><b>Open a new chat</b> in Gemini and attach your resume with <b>+</b>. One resume is enough.</li>
+          <li data-show="gemini" hidden><b>Type <code>@</code></b> in the message box and <b>pick <code>canada-career-coach</code> from the menu</b>. Don't type the name yourself. It only works when you pick it, and it shows in <b>bold</b>. Older guides say <code>/</code>; Gemini now uses <code>@</code>.</li>
           <li data-show="terminal" hidden><b>Start a new session</b> and give the path to your resume file. One resume is enough.</li>
           <li><b>Paste this prompt</b> in the same message and send it.</li>
           <li><b>Answer the AI's questions</b> and check every line before you say yes.</li>
@@ -349,7 +351,7 @@
         <div class="save">
           <p class="label">Save your profile for next time</p>
           <p class="small" data-show="claude">The AI shares <code>my-profile.md</code> as a file card. Press its download button and keep the file private. You'll attach it when you start a new chat later.</p>
-          <p class="small" data-show="gemini" hidden>Copy the full profile the Gem shows you and save it in a note or a file named <code>my-profile.md</code>. You'll paste it when you start a new chat later.</p>
+          <p class="small" data-show="gemini" hidden>Gemini adds source tags to its answers, and they get copied too. To get a clean copy, send: <i>Output the final profile as one Markdown code block with no source citations.</i> Press the code block's copy button and save it in a file named <code>my-profile.md</code>. Check that every section is there, including your skills. You'll attach it when you start a new chat later.</p>
           <p class="small" data-show="terminal" hidden>Nothing to do. Your profile is saved in your own copy of the skill folder. Never share that copy.</p>
         </div>
       </div>
@@ -379,7 +381,7 @@
           <button type="button" data-switch-tool="tool-terminal" data-stay>Terminal</button>
         </div>
         <p class="small" data-show="claude">Attach the <code>my-profile.md</code> you saved in step 3, then add the prompt below in the same message.</p>
-        <p class="small" data-show="gemini" hidden>Open your Gem, paste the profile you saved in step 3, then add the prompt below in the same message.</p>
+        <p class="small" data-show="gemini" hidden>Open a new chat, attach the <code>my-profile.md</code> you saved in step 3, type <code>@</code> and pick <code>canada-career-coach</code>, then add the prompt below in the same message.</p>
         <p class="small" data-show="terminal" hidden>Nothing to attach. Your profile is in the skill folder.</p>
       </div>
     </div>
@@ -399,7 +401,7 @@
       <div>
         <p class="label">What you'll get back</p>
         <p class="muted">The same answers as the <a href="#sample">sample above</a>:</p>
-        <p class="note-basic" data-show="gemini" hidden>Basic route: Canadian rules and keyword suggestions are less detailed.</p>
+        <p class="note-basic" data-show="gemini" hidden>Basic route: double-check experience requirements, application instructions and any keyword it suggests adding. Only add a keyword you can back up.</p>
         <ul class="getback">
           <li>Should you apply, and your first step</li>
           <li>Which requirements you meet, and what to verify</li>

@@ -56,11 +56,11 @@ Use a normal chat. In an incognito chat the skill can't read its reference files
 Download `canada-career-coach-v0.1.1.zip` from the [latest release](https://github.com/Rachel-lcy/Canada-Career-Coach/releases/latest). Don't unzip it for Claude.ai. The zip contains only the skill folder.
 
 | Where       | How                                                                                                                                                                                                                                                                 |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
 | Claude.ai   | 1. Settings → Capabilities: turn on **Create and edit files** (Artifacts must be on too). 2. Settings → Customize → Skills → **+ Add**: upload the zip. 3. Done when `canada-career-coach` appears under **Yours** with a **Turn off** button (that means it's on). |
 | Claude Code | Unzip into `~/.claude/skills/` (personal) or `.claude/skills/` (per project)                                                                                                                                                                                        |
 | Gemini CLI  | Unzip into `~/.gemini/skills/` or `.gemini/skills/`                                                                                                                                                                                                                 |
-| Gemini app  | No native skill support. Create a Gem and paste the contents of `SKILL.md` into its instructions. Reference files aren't included, so results are more basic                                                                                                        |
+| Gemini app  | Upload the release zip in **Customize → Skills → Create → Upload** (web or Mac app). In a chat, type `@` and pick `canada-career-coach` from the menu. Basic results: in testing it missed some requirements and overrated fit, so check its answers                |     |
 
 Custom skills do not sync between products, so install them separately where you use them. Claude.ai steps checked on 10 November 2026; menu names change, so confirm against the official documentation.
 
